@@ -1,7 +1,17 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
+import NavLink from '@/Components/NavLink.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import { Head } from '@inertiajs/vue3';
+
+
+
+
+const createService = () => {
+
+    window.location.href = "/service/create";
+};
+
 </script>
 
 <template>
@@ -10,7 +20,7 @@ import { Head } from '@inertiajs/vue3';
     <AuthenticatedLayout>
 
         <div class="max-w-6xl mx-auto mt-5 flex justify-end">
-            <PrimaryButton>
+            <PrimaryButton @click="createService">
                 Créer un service
             </PrimaryButton>
         </div>
