@@ -33,7 +33,7 @@ const submit = () => {
     <AuthenticatedLayout>
         <Head title="Créer un service" />
 
-        <div class="max-w-6xl mx-auto mt-10">
+        <div class="max-w-6xl mx-auto mt-20">
 
             <h2 class="text-center text-orange-500 text-xl font-semibold ">Créer un service</h2>
             
@@ -141,7 +141,7 @@ const submit = () => {
                     <InputLabel class="text-gray-500" for="second_description" value="Description 2" />
     
                     <textarea 
-                        class="block h-40 w-full text-sm text-gray-900 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mt-1"
+                        class="block h-40 w-full text-sm text-gray-900 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  mt-1"
                         id="second_description"
                         type="second_description"
                         v-model="form.second_description"

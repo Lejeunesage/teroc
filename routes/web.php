@@ -34,8 +34,10 @@ Route::get('/', function () {
 
 Route::middleware('auth')->group(function () {
 
+    
     // DASHBOARD
     Route::get('/dashboard', [Controller::class, 'index'])->name('dashboard');
+
 
     // SERVICES
     Route::get('/service/index', [ServiceController::class, 'index'])->name('service.index');
@@ -46,14 +48,15 @@ Route::middleware('auth')->group(function () {
     Route::patch('/service/update', [ServiceController::class, 'update'])->name('service.update');
     Route::delete('/service/destroy', [ServiceController::class, 'destroy'])->name('service.destroy');
     
+
     // PORTFOLIO
     Route::get('/portfolio/index', [PortfolioController::class, 'index'])->name('portfolio.index');
     Route::get('/portfolio/create', [PortfolioController::class, 'create'])->name('portfolio.create');
-    Route::get('/portfolio/store', [PortfolioController::class, 'store'])->name('portfolio.store');
-    Route::get('/portfolio/show', [PortfolioController::class, 'show'])->name('portfolio.show');
-    Route::get('/portfolio/edit', [PortfolioController::class, 'edit'])->name('portfolio.edit');
-    Route::patch('/portfolio/update', [PortfolioController::class, 'update'])->name('portfolio.update');
-    Route::delete('/portfolio/destroy', [PortfolioController::class, 'destroy'])->name('portfolio.destroy');
+    Route::post('/portfolio/store', [PortfolioController::class, 'store'])->name('portfolio.store');
+    Route::get('/portfolio/{id}', [PortfolioController::class, 'show'])->name('portfolio.show');
+    Route::get('/portfolio/{id}', [PortfolioController::class, 'edit'])->name('portfolio.edit');
+    Route::put('/portfolio/update', [PortfolioController::class, 'update'])->name('portfolio.update');
+    Route::delete('/portfolio/{id}', [PortfolioController::class, 'destroy'])->name('portfolio.destroy');
 
 
     // PROFIL
