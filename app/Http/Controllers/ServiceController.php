@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Inertia\Inertia;
 use App\Models\Service;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class ServiceController extends Controller
 {
@@ -15,7 +16,12 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        return Inertia::render('Service/Index');
+        $services = Service::all();
+        return Inertia::render('Service/Index',
+            [
+                'services' => $services
+            ]
+        );
     }
 
     /**
@@ -36,7 +42,29 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'service_name' => 'required|string|max:255',
+            'service_category'  => 'required|string|max:255',
+            'service_image' => 'required|string|max:255',
+            'first_title' => 'required|string|max:255',
+            'first_description' => 'required|string',
+            'second_title' => 'required|string|max:255',
+            'second_description' => 'required|string' 
+           
+        ]);
+
+        Service::create([
+            'service_name'  => $request-> service_name,
+            'service_category' => $request-> ervice_category,
+            'service_image' => $request-> service_image,
+            'first_title' => $request-> first_title,
+            'first_description' => $request-> first_description,
+            'second_title' => $request-> second_title,
+            'second_description' => $request-> second_description
+        ]);
+        sleep(1);
+
+        return Redirect::route('service.index')->with('message', 'Service créer avec succès !');
     }
 
     /**

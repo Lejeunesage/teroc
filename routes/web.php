@@ -40,7 +40,7 @@ Route::middleware('auth')->group(function () {
     // SERVICES
     Route::get('/service/index', [ServiceController::class, 'index'])->name('service.index');
     Route::get('/service/create', [ServiceController::class, 'create'])->name('service.create');
-    Route::get('/service/store', [ServiceController::class, 'store'])->name('service.store');
+    Route::post('/service/store', [ServiceController::class, 'store'])->name('service.store');
     Route::get('/service/show', [ServiceController::class, 'show'])->name('service.show');
     Route::get('/service/edit', [ServiceController::class, 'edit'])->name('service.edit');
     Route::patch('/service/update', [ServiceController::class, 'update'])->name('service.update');
