@@ -6,6 +6,8 @@ use Inertia\Inertia;
 use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Validator;
+
 
 class ServiceController extends Controller
 {
@@ -45,7 +47,7 @@ class ServiceController extends Controller
         $request->validate([
             'service_name' => 'required|string|max:255',
             'service_category'  => 'required|string|max:255',
-            'service_image' => 'required|string|max:255',
+            'service_image' => 'nullable|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
             'first_title' => 'required|string|max:255',
             'first_description' => 'required|string',
             'second_title' => 'required|string|max:255',
@@ -53,10 +55,15 @@ class ServiceController extends Controller
            
         ]);
 
+        $image_path = '';
+        if ($request->hasFile('service_image')) {
+            $image_path = $request->file('service_image')->store('images', 'public');
+        }
+
         Service::create([
             'service_name'  => $request-> service_name,
-            'service_category' => $request-> ervice_category,
-            'service_image' => $request-> service_image,
+            'service_category' => $request-> service_category,
+            'service_image' => $image_path,
             'first_title' => $request-> first_title,
             'first_description' => $request-> first_description,
             'second_title' => $request-> second_title,

@@ -4,6 +4,9 @@ import ApplicationLogo from '@/Components/ApplicationLogo.vue';
 import Dropdown from '@/Components/Dropdown.vue';
 import DropdownLink from '@/Components/DropdownLink.vue';
 import NavLink from '@/Components/NavLink.vue';
+import DashboardIcon from '@/Components/DashboardIcon.vue';
+import PortfolioIcon from '@/Components/PortfolioIcon.vue';
+import Service from '@/Components/Service.vue';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 import { Link } from '@inertiajs/vue3';
 
@@ -12,7 +15,7 @@ const showingNavigationDropdown = ref(false);
 
 <template>
     
-    <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 bg-blue-100">
+    <nav class="fixed top-0 z-50 w-full border-b border-gray-200 bg-blue-100">
         <div class="px-3 py-3 lg:px-5 lg:pl-3">
             <div class="flex items-center justify-between">
                 <div class="flex items-center justify-start">
@@ -28,7 +31,7 @@ const showingNavigationDropdown = ref(false);
 
                 </div>
 
-                <div class="hidden sm:flex sm:items-center sm:ml-6">
+                <div class="hidden md:flex sm:items-center sm:ml-6">
                     <!-- Settings Dropdown -->
                     <div class="ml-3 relative">
                         <Dropdown align="right" width="48">
@@ -67,7 +70,7 @@ const showingNavigationDropdown = ref(false);
                 </div>
 
                 <!-- Hamburger -->
-                <div class="-mr-2 flex items-center sm:hidden">
+                <div class="-mr-2 flex items-center md:hidden">
                     <button
                         @click="showingNavigationDropdown = !showingNavigationDropdown"
                         class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
@@ -102,16 +105,19 @@ const showingNavigationDropdown = ref(false);
         <!-- Responsive Navigation Menu -->
         <div
             :class="{ block: showingNavigationDropdown, hidden: !showingNavigationDropdown }"
-            class="sm:hidden"
+            class="md:hidden"
         >
             <div class="pt-2 pb-3 space-y-1">
                 <ResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
+                    <DashboardIcon/>
                     Tableau de bord
                 </ResponsiveNavLink>
                 <ResponsiveNavLink :href="route('service.index')" :active="route().current('service.index')">
+                    <Service/>
                     Services
                 </ResponsiveNavLink>
                 <ResponsiveNavLink :href="route('portfolio.index')" :active="route().current('portfolio.index')">
+                    <PortfolioIcon/>
                     Portfolio
                 </ResponsiveNavLink>
             </div>
@@ -136,21 +142,24 @@ const showingNavigationDropdown = ref(false);
         
     </nav>
 
-    <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-40 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 bg-blue-100" aria-label="Sidebar">
-    <div class="h-full px-3 pb-4 overflow-y-auto bg-white bg-blue-100 ">
+    <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-48 h-screen pt-20 transition-transform -translate-x-full border-r border-gray-200 md:translate-x-0 bg-blue-100" aria-label="Sidebar">
+    <div class="h-full px-3 pb-4 overflow-y-auto  bg-blue-100 ">
         <ul class="space-y-2">
             <li>
                 <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
+                   <DashboardIcon/>
                     Tableau de bord
                 </NavLink>
             </li>
             <li>
                 <NavLink :href="route('service.index')" :active="route().current('service.index')">
+                    <Service/>
                     Services
                 </NavLink>
             </li>
-            <li>
+            <li >
                 <NavLink :href="route('portfolio.index')" :active="route().current('portfolio.index')">
+                    <PortfolioIcon/>
                     Portfolio
                 </NavLink>
             </li>
@@ -159,7 +168,7 @@ const showingNavigationDropdown = ref(false);
     </div>
     </aside>
 
-    <div class="p-4 sm:ml-32">
+    <div class=" md:ml-48  ">
 
        
     

@@ -10,7 +10,7 @@ import { Head } from '@inertiajs/vue3';
     <AuthenticatedLayout>
         
     
-        <div class="max-w-6xl mx-auto mt-5 flex justify-end">
+        <div class="max-w-6xl mx-auto mt-20 flex justify-end">
             <PrimaryButton>
                 Créer un portfolio
             </PrimaryButton>

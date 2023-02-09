@@ -15,9 +15,9 @@ const props = defineProps({
 });
 
 const form = useForm({
-    service_service_name : '' ,
+    service_name : '' ,
     service_category : '',
-    service_service_image: '',
+    service_image: '',
     first_title : '',
     first_description: '',
     second_title: '',
@@ -25,7 +25,9 @@ const form = useForm({
 });
 
 const submit = () => {
-    form.post(route('service.store'));
+    form.post(route('service.store'), {
+        forceFormData: true,
+    });
 };
 </script>
 
@@ -33,11 +35,11 @@ const submit = () => {
     <AuthenticatedLayout>
         <Head title="Créer un service" />
 
-        <div class="max-w-6xl mx-auto mt-20">
+        <div class="max-w-6xl mx-auto mt-20 ">
 
-            <h2 class="text-center text-orange-500 text-xl font-semibold ">Créer un service</h2>
+            <h2 class="text-center text-[orange] text-xl font-semibold ">Créer un service</h2>
             
-            <form @submit.prevent="submit" class="max-w-xl mx-auto ">
+            <form @submit.prevent="submit" class="max-w-xl mx-auto p-6 bg-white overflow-hidden shadow-xl rounded-lg">
                 <div>
                     <InputLabel class="text-gray-500" for="service_name" value="Nom service" />
     
@@ -65,15 +67,17 @@ const submit = () => {
                         autofocus
                         autocomplete="service_category"
                     >
-                    <option value="Solutions Technologiques"
+                    <option value="Solutions-Technologiques"
                     >Solutions Technologiques</option>
-                    <option value="Solutions en Markéting Numérique"
+                    <option value="Solutions-En-Markéting-Numérique"
                     >Solutions en Markéting Numérique</option>
 
                     </select>
     
                     <InputError class="mt-2" :message="form.errors.service_category" />
                 </div>
+
+                
 
                 <div class="mt-4">
                     

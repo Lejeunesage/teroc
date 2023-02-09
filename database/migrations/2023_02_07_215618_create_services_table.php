@@ -19,9 +19,9 @@ return new class extends Migration
             $table->string('service_category');
             $table->string('service_image');
             $table->string('first_title');
-            $table->string('first_description');
+            $table->text('first_description');
             $table->string('second_title');
-            $table->string('second_description');
+            $table->text('second_description');
             $table->timestamps();
         });
     }

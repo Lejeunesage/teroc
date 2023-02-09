@@ -36,7 +36,7 @@ const createService = () => {
                     </span>
                 </div> -->
 
-        <div class="max-w-6xl mx-auto mt-5 flex justify-end">
+        <div class="max-w-6xl mx-auto mt-20 flex justify-end">
             <PrimaryButton @click="createService">
                 Créer un service
             </PrimaryButton>
