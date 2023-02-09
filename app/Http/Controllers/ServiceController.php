@@ -65,9 +65,9 @@ class ServiceController extends Controller
             'service_category' => $request-> service_category,
             'service_image' => $image_path,
             'first_title' => $request-> first_title,
-            'first_description' => $request-> first_description,
+            'first_description' => nl2br($request-> first_description),
             'second_title' => $request-> second_title,
-            'second_description' => $request-> second_description
+            'second_description' => nl2br($request-> second_description)
         ]);
         sleep(1);
 

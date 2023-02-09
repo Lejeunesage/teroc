@@ -2,16 +2,19 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import NavLink from '@/Components/NavLink.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
+import SecondaryButton from '@/Components/SecondaryButton.vue';
+import DangerButton from '@/Components/DangerButton.vue';
 import { Head } from '@inertiajs/vue3';
 
 
 //Permet de recupérer les données retournée par la base de donnée
-// const props = defineProps({
-//     services: {
-//         type: Object,
-//         default: () => ({}),
-//     },
-// });
+const props = defineProps({
+    services: {
+        type: Object,
+        default: () => ({}),
+    },
+    
+});
 
 
 
@@ -46,10 +49,39 @@ const createService = () => {
         </template>
 
         <div class="py-12">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                    <div class="p-6 text-gray-900">Aucun service!</div>
+            <div class="flex flex-wrap  gap-10 max-w-7xl mx-auto sm:px-6 lg:px-8 ">
+                <div class="bg-blue-50 overflow-hidden shadow-sm sm:rounded-lg p-5" v-for="service in services"
+                    :key="service.id">
+
+                    <div>
+                        <h1 class="text-lg font-bold">
+                        {{ service.service_name }}
+                        </h1>
+
+                        <img  class="mt-5" :src="service.service_image" alt="">
+
+                        <h2 class="mt-5 text-lg font-semibold">{{ service.first_title }}</h2>
+
+                        <p class="mt-5">{{ service.first_description }}</p>
+
+                        <h2 class="mt-5 text-lg font-semibold">{{ service.second_title }}</h2>
+                        <p class="mt-5">{{ service.second_description }}</p>
+                    </div>
+
+                    <div class=" mt-5 flex justify-center gap-5">
+                        <PrimaryButton>
+                            Voir plus
+                        </PrimaryButton>
+                        <SecondaryButton>
+                            Editer
+                        </SecondaryButton>
+                        <DangerButton>
+                            Supprimer
+                        </DangerButton>
+                    </div>
                 </div>
+        
+
             </div>
         </div>
     </AuthenticatedLayout>
