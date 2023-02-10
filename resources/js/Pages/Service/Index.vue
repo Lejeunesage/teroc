@@ -35,10 +35,10 @@ const editService = (id) => {
 
 function deleteService(service, id) {
     
-    if (confirm( `Voulez vous supprimer le service <<${service}>> ?`)) {
+    if (confirm( `Voulez vous supprimer le service : ${service} ?`)) {
         
         Inertia.delete(route('service.destroy', id));
-        // location.reload();
+        location.reload();
     }
     
 }
