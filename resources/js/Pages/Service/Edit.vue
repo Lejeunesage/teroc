@@ -1,10 +1,11 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import InputError from '@/Components/InputError.vue';
-import InputLabel from '@/Components/InputLabel.vue';
-import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
-import { Head, Link, useForm } from '@inertiajs/vue3';
+import PrimaryButton from '@/Components/PrimaryButton.vue';
+import EditIcon from '@/Components/EditIcon.vue';
+import DeleteIcon from '@/Components/DeleteIcon.vue';
+
+import { Head, useForm } from '@inertiajs/vue3';
 
 //Permet de recupérer les données retournée par la base de donnée
 const props = defineProps({
@@ -14,32 +15,35 @@ const props = defineProps({
     },
 });
 
+
+
 const form = useForm({
-    service_name : '' ,
-    service_category : '',
-    service_image: '',
-    first_title : '',
-    first_description: '',
-    second_title: '',
-    second_description : ''
+
+
+    service_name : props.services.service_name ,
+    service_category : props.services.service_category,
+    service_image: props.services.service_image,
+    first_title : props.services.first_title,
+    first_description: props.services.first_description,
+    second_title: props.services.second_title,
+    second_description : (props.services.second_description)
 });
 
-const submit = () => {
-    form.post(route('service.store'), {
-        forceFormData: true,
-    });
-};
+console.log(props.services.id);
 
 
+// const submit = () => {
+//     form.put(route("blogs.update", props.blog.id));
+// };
 </script>
 
 <template>
     <AuthenticatedLayout>
-        <Head title="Créer un service" />
+        <Head title="Editer un service" />
 
         <div class="max-w-6xl mx-auto mt-20 ">
 
-            <h2 class="text-center text-[orange] text-xl font-semibold ">Créer un service</h2>
+            <h2 class="text-center text-[orange] text-xl font-semibold ">Editer un service</h2>
             
             <form @submit.prevent="submit" class="max-w-xl mx-auto p-6 bg-white overflow-hidden shadow-xl rounded-lg">
                 <div>
@@ -161,7 +165,7 @@ const submit = () => {
     
                 <div class="flex items-center justify-end mt-4">
                     <PrimaryButton class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                        Créer
+                        Enrégistrer
                     </PrimaryButton>
                 </div>
             </form>

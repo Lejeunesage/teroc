@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+
+
 use Inertia\Inertia;
 use App\Models\Service;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreService;
 use Illuminate\Support\Facades\Redirect;
-use Validator;
 
 
 class ServiceController extends Controller
@@ -42,36 +44,33 @@ class ServiceController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreService $request)
     {
-        $request->validate([
-            'service_name' => 'required|string|max:255',
-            'service_category'  => 'required|string|max:255',
-            'service_image' => 'nullable|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
-            'first_title' => 'required|string|max:255',
-            'first_description' => 'required|string',
-            'second_title' => 'required|string|max:255',
-            'second_description' => 'required|string' 
-           
-        ]);
 
         $image_path = '';
+
         if ($request->hasFile('service_image')) {
-            $image_path = $request->file('service_image')->store('images', 'public');
+            $image_path = $request->file('service_image')->store('public');
+          
         }
 
-        Service::create([
+    
+
+        $data = Service::create([
             'service_name'  => $request-> service_name,
             'service_category' => $request-> service_category,
             'service_image' => $image_path,
             'first_title' => $request-> first_title,
             'first_description' => nl2br($request-> first_description),
+            // 'first_description' =>  $firstrequest,
             'second_title' => $request-> second_title,
             'second_description' => nl2br($request-> second_description)
+            // 'second_description' =>  $secondrequest 
         ]);
         sleep(1);
 
-        return Redirect::route('service.index')->with('message', 'Service créer avec succès !');
+       
+        return redirect()->route('service.index')->with('message', 'Service créer avec succès !');
     }
 
     /**
@@ -91,9 +90,16 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function edit(Service $service)
+    public function edit($id)
     {
-        //
+
+        $services = Service::findOrFail($id);
+        return Inertia::render(
+            'Service/Edit',
+            [
+                'services' => $services
+            ]
+        );
     }
 
     /**
@@ -114,8 +120,11 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Service $service)
+    public function destroy(Service $services , $id)
     {
-        //
+        $services->destroy($id);
+        sleep(1);
+
+        // return Redirect::back()->with('message', 'Service supprimer avec succès !');
     }
 }

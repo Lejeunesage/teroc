@@ -43,10 +43,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/service/index', [ServiceController::class, 'index'])->name('service.index');
     Route::get('/service/create', [ServiceController::class, 'create'])->name('service.create');
     Route::post('/service/store', [ServiceController::class, 'store'])->name('service.store');
-    Route::get('/service/show', [ServiceController::class, 'show'])->name('service.show');
-    Route::get('/service/edit', [ServiceController::class, 'edit'])->name('service.edit');
-    Route::put('/service/update', [ServiceController::class, 'update'])->name('service.update');
-    Route::delete('/service/destroy', [ServiceController::class, 'destroy'])->name('service.destroy');
+    Route::get('/service/show/{id}', [ServiceController::class, 'show'])->name('service.show');
+    Route::get('/service/edit/{id}', [ServiceController::class, 'edit'])->name('service.edit');
+    Route::put('/service/update/{id}', [ServiceController::class, 'update'])->name('service.update');
+    Route::delete('/service/destroy/{id}', [ServiceController::class, 'destroy'])->name('service.destroy');
     
 
     // PORTFOLIO
