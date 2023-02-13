@@ -1,5 +1,7 @@
 <script setup>
 import NavbarLayout from '@/Layouts/NavbarLayout.vue';
+import Hero from '@/Layouts/Hero.vue';
+import Service from '@/Layouts/Service.vue';
 import InputError from '@/Components/InputError.vue';
 import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
@@ -14,10 +16,9 @@ import { Head, Link, useForm } from '@inertiajs/vue3';
     <NavbarLayout >
          <Head title="Acceuil" />
 
-         <h1 >Créateurs de solutions technologiques et marketing.</h1>
+         <Hero></Hero>
+         <Service></Service>
 
-        <p > Logiciels et applications sur mesure, sites web et marketing numérique: nous créons des environnements de travail qui transforment les organisations et connectons les entreprises à leurs clients au moment où ça compte.</p>
-        
     </NavbarLayout>
 
 

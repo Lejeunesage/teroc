@@ -18,6 +18,8 @@ module.exports = {
             colors: {
                 'clr-amour': '#e2e0ff',
               },
+
+            
         },
     },
 
