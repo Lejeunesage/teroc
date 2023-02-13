@@ -15,23 +15,23 @@
     </div>
     <div class="  mt-10 lg:mt-0">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-        <div class="  bg-[orange] p-4  rounded-[30px]">
+        <div class="lg:h-[10rem] md:h-[5.5rem] bg-[orange] p-4  rounded-[30px]">
           <h2 class="font-bold text-lg text-indigo-900">Développement Logiciels et Applications</h2>
 
         </div>
-        <div class="  md:h-[5.5rem] flex items-center   bg-[orange] p-4  rounded-[30px]">
+        <div class="lg:h-[10rem]  md:h-[5.5rem]    bg-[orange] p-4  rounded-[30px]">
           <h2 class="font-bold text-lg text-indigo-900">Création de Sites Web</h2>
         </div>
-        <div class="  md:h-[5.5rem] flex items-center   bg-[orange] p-4  rounded-[30px]">
+        <div class="lg:h-[10rem]  md:h-[5.5rem]    bg-[orange] p-4  rounded-[30px]">
           <h2 class="font-bold text-lg text-indigo-900">Web Design</h2>
         </div>
-        <div class="  md:h-[5.5rem] flex items-center   bg-[orange] p-4  rounded-[30px]">
+        <div class="lg:h-[10rem]  md:h-[5.5rem]    bg-[orange] p-4  rounded-[30px]">
           <h2 class="font-bold text-lg text-indigo-900">Services de Reférencement (SEO)</h2>
         </div>
-        <div class="  md:h-[5.5rem] flex items-center   bg-[orange] p-4  rounded-[30px]">
+        <div class="lg:h-[10rem]  md:h-[5.5rem]    bg-[orange] p-4  rounded-[30px]">
           <h2 class="font-bold text-lg text-indigo-900">Publicité Google / Facebook</h2>
         </div>
-        <div class="  md:h-[5.5rem] flex items-center  bg-[orange] p-4  rounded-[30px]">
+        <div class="lg:h-[10rem]  md:h-[5.5rem]   bg-[orange] p-4  rounded-[30px]">
           
           <h2 class="font-bold text-lg text-indigo-900">Email Marketing / Marketing Automation</h2>
         </div>
