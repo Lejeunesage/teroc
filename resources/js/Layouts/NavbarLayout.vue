@@ -42,7 +42,7 @@ const showingNavigationDropdown = ref(false);
         </div>
 
          <!-- Hamburger -->
-         <div class="-mr-2 flex items-center md:hidden">
+         <div class="-mr-2 flex items-center md:hidden ">
                     <button
                         @click="showingNavigationDropdown = !showingNavigationDropdown"
                         class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
@@ -78,7 +78,7 @@ const showingNavigationDropdown = ref(false);
 
 <nav 
 
-class=" hidden md:flex pt-16 bg-gray-50 shadow-md"
+class=" hidden md:flex  bg-gray-50 shadow-md md:fixed left-0 right-0 top-14"
 >
     <div class="max-w-screen-xl px-4 py-3 mx-auto md:px-6 text-center">
         <div class="flex items-center justify-center">
@@ -131,7 +131,7 @@ class=" hidden md:flex pt-16 bg-gray-50 shadow-md"
     </div>
 </nav>
 
-<div class="pt-20 md:pt-2">
+<div class="pt-10 md:pt-2">
 <!-- Page Content -->
 <main>
     <slot />
@@ -141,5 +141,16 @@ class=" hidden md:flex pt-16 bg-gray-50 shadow-md"
     
 
 </template>
+
+<!-- <style>
+::-webkit-scrollbar-thumb{
+    width: 5px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: orange;
+}
+
+</style> -->
 
 

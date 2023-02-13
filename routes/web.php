@@ -24,7 +24,7 @@ use App\Http\Controllers\PortfolioController;
 
 
 // WEBPAGE
-Route::get('/acceuil', [RouteController::class, 'index'])->name('acceuil');
+Route::get('/', [RouteController::class, 'index'])->name('acceuil');
 
 Route::middleware('auth')->group(function () {
 
