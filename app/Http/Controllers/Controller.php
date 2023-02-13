@@ -22,3 +22,5 @@ class Controller extends BaseController
         return Inertia::render('Dashboard');
     }
 }
+ 
+

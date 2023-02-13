@@ -15,7 +15,7 @@ const showingNavigationDropdown = ref(false);
 
 <template>
     
-    <nav class="fixed top-0 z-50 w-full border-b border-gray-200 bg-blue-100">
+    <nav class="fixed top-0 z-50 w-full border-b border-gray-200 bg-clr-amour">
         <div class="px-3 py-3 lg:px-5 lg:pl-3">
             <div class="flex items-center justify-between">
                 <div class="flex items-center justify-start">
@@ -142,8 +142,8 @@ const showingNavigationDropdown = ref(false);
         
     </nav>
 
-    <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-48 h-screen pt-20 transition-transform -translate-x-full border-r border-gray-200 md:translate-x-0 bg-blue-100" aria-label="Sidebar">
-    <div class="h-full px-3 pb-4 overflow-y-auto  bg-blue-100 ">
+    <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-48 h-screen pt-20 transition-transform -translate-x-full border-r border-gray-200 md:translate-x-0 bg-clr-amour" aria-label="Sidebar">
+    <div class="h-full px-3 pb-4 overflow-y-auto  bg-clr-amour">
         <ul class="space-y-2">
             <li>
                 <NavLink :href="route('dashboard')" :active="route().current('dashboard')">

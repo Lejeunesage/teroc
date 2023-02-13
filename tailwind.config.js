@@ -14,6 +14,10 @@ module.exports = {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
+
+            colors: {
+                'clr-amour': '#e2e0ff',
+              },
         },
     },
 

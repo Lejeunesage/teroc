@@ -4,7 +4,7 @@ import TextInput from '@/Components/TextInput.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import EditIcon from '@/Components/EditIcon.vue';
 import DeleteIcon from '@/Components/DeleteIcon.vue';
-
+import { Inertia } from "@inertiajs/inertia";
 import { Head, useForm } from '@inertiajs/vue3';
 
 //Permet de recupérer les données retournée par la base de donnée
@@ -29,12 +29,19 @@ const form = useForm({
     second_description : (props.services.second_description)
 });
 
-console.log(props.services.id);
 
+
+const submit = () => {
+    console.log(props.services.id);
+
+    form.put(`/service/update/${props.services.id}`);
+};
 
 // const submit = () => {
-//     form.put(route("blogs.update", props.blog.id));
+//   Inertia.put(`/service/update/${props.services.id}`);
 // };
+
+
 </script>
 
 <template>
@@ -164,8 +171,12 @@ console.log(props.services.id);
                 </div>
     
                 <div class="flex items-center justify-end mt-4">
-                    <PrimaryButton class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                        Enrégistrer
+                    <PrimaryButton
+                    class="flex items-center justify-end mt-4"
+                    :class="{ 'opacity-25': form.processing }"
+                    :disabled="form.processing"
+                    >
+                    Enrégistrer
                     </PrimaryButton>
                 </div>
             </form>
