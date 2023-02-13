@@ -106,7 +106,7 @@ class=" hidden md:flex  bg-gray-50 shadow-md md:fixed left-0 right-0 top-14"
 <nav 
 
 :class="{ block: showingNavigationDropdown, hidden: !showingNavigationDropdown }"
-        class="md:hidden bg-gray-50 shadow-md absolute  right-0 top-[4rem] left-0 "
+        class="md:hidden bg-gray-50 shadow-md fixed left-0 right-0 top-14  right-0 top-[4rem] left-0 "
 >
     <div class="max-w-screen-xl px-4  mx-auto md:px-6 text-center ">
         <div class="flex items-center justify-center">

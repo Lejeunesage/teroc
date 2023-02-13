@@ -4,8 +4,8 @@
 
 <template>
   <div class=" bg-clr-amour">
-    <div class="flex gap-24 mx-auto max-w-screen-xl px-4 md:px-6 py-2.5 pt-[5rem]" >
-    <div class="  w-[30rem] " >
+    <div class="lg:flex  gap-24 mx-auto max-w-screen-xl px-4 md:px-6 py-2.5 pt-[5rem]" >
+    <div class="  lg:w-[50rem] " >
       <h2 class="text-3xl  font-bold">
         Passez au niveau supérieur grâce à la technologie et le marketing numérique
       </h2>
@@ -13,27 +13,27 @@
         Notre agence web et marketing vous offre un panel de services technologiques et marketing numériques adaptés à votre réalité et vos besoins. Qu’il s’agisse de développer des applications ou des fois de l'infographie, de faire de l’intégration logiciel, de mettre en place une infrastructure TI ou de booster vos ventes en ligne, vous êtes au bon endroit.
       </p>
     </div>
-    <div class="  ">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-        <div class="w-52 h-52 bg-[orange] p-4  rounded-[30px]">
-          <h2 class="font-bold text-lg text-indigo-900">Developpenment logiciel et applications</h2>
+    <div class="  mt-10 lg:mt-0">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div class="  bg-[orange] p-4  rounded-[30px]">
+          <h2 class="font-bold text-lg text-indigo-900">Développement Logiciels et Applications</h2>
 
         </div>
-        <div class="w-52 h-52 bg-[orange] p-4  rounded-[30px]">
-          <h2 class="font-bold text-lg text-indigo-900">Création de Site Web</h2>
+        <div class="  md:h-[5.5rem] flex items-center   bg-[orange] p-4  rounded-[30px]">
+          <h2 class="font-bold text-lg text-indigo-900">Création de Sites Web</h2>
         </div>
-        <div class="w-52 h-52 bg-[orange] p-4  rounded-[30px]">
-          <h2 class="font-bold text-lg text-indigo-900">Web design</h2>
+        <div class="  md:h-[5.5rem] flex items-center   bg-[orange] p-4  rounded-[30px]">
+          <h2 class="font-bold text-lg text-indigo-900">Web Design</h2>
         </div>
-        <div class="w-52 h-52 bg-[orange] p-4  rounded-[30px]">
-          <h2 class="font-bold text-lg text-indigo-900">Service de reférencement (SEO)</h2>
+        <div class="  md:h-[5.5rem] flex items-center   bg-[orange] p-4  rounded-[30px]">
+          <h2 class="font-bold text-lg text-indigo-900">Services de Reférencement (SEO)</h2>
         </div>
-        <div class="w-52 h-52 bg-[orange] p-4  rounded-[30px]">
-          <h2 class="font-bold text-lg text-indigo-900">Publicité Google</h2>
+        <div class="  md:h-[5.5rem] flex items-center   bg-[orange] p-4  rounded-[30px]">
+          <h2 class="font-bold text-lg text-indigo-900">Publicité Google / Facebook</h2>
         </div>
-        <div class="w-52 h-52 bg-[orange] p-4  rounded-[30px]">
+        <div class="  md:h-[5.5rem] flex items-center  bg-[orange] p-4  rounded-[30px]">
           
-          <h2 class="font-bold text-lg text-indigo-900">Publicité Facebook</h2>
+          <h2 class="font-bold text-lg text-indigo-900">Email Marketing / Marketing Automation</h2>
         </div>
       </div>
     </div>
