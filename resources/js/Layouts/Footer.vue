@@ -6,7 +6,8 @@ import { Head, Link } from '@inertiajs/vue3';
 <template>
     
     <footer class="bg-clr-amour rounded-t-3xl ">
-        <div class="grid grid-cols-2 gap-8 px-6 py-8 md:grid-cols-4">
+       <div >
+        <div class="grid grid-cols-2 gap-8 px-6 py-8 md:grid-cols-4 mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
             <div>
                         <!-- Logo -->
                 <div class="shrink-0 flex items-center mb-4 ">
@@ -108,6 +109,7 @@ import { Head, Link } from '@inertiajs/vue3';
                 </a>
             </div>
         </div>
+       </div>
     </footer>
 
 </template>
