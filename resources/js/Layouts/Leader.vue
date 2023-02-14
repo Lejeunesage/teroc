@@ -31,8 +31,8 @@
 
             <div >
                 
-                <a href="tel:+22957972575" class="mt-20 border py-[2rem] flex flex-col mx-auto md:max-w-[30rem] justify-center text-center gap-[10] bg-[orange] shadow-md">
-                    <h3 class="font-bold text-lg">Souhaitez vous débuter un projet avec nous?</h3>
+                <a href="tel:+22957972575" class="mt-20 border py-[2rem] flex flex-col mx-auto md:max-w-[30rem] justify-center text-white text-center gap-[10] bg-[orange] shadow-md">
+                    <h3 class="font-bold text-lg ">Souhaitez vous débuter un projet avec nous?</h3>
                     <span class="mt-5 text-xl font-bold">+229 57972575</span>
                 </a>
             

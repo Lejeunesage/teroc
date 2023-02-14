@@ -4,6 +4,7 @@ import Hero from '@/Layouts/Hero.vue';
 import Service from '@/Layouts/Service.vue';
 import Portfolio from '@/Layouts/Portfolio.vue';
 import Partenaire from '@/Layouts/Partenaire.vue';
+import Footer from '@/Layouts/Footer.vue';
 import Leader from '@/Layouts/Leader.vue';
 import InputError from '@/Components/InputError.vue';
 import InputLabel from '@/Components/InputLabel.vue';
@@ -24,6 +25,7 @@ import { Head, Link, useForm } from '@inertiajs/vue3';
          <Portfolio></Portfolio>
          <Partenaire></Partenaire>
          <Leader></Leader>
+         <Footer></Footer>
 
     </NavbarLayout>
 

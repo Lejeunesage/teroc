@@ -32,7 +32,7 @@ import  PrincipalLink  from "@/Components/PrincipalLink.vue";
         </div>
         
     </div>
-    <div class="mt-[4rem] text-center">
+    <div class="mt-[4rem] text-center text-white">
        <a href="" class=" border px-20 py-2 bg-[orange] font-bold text-lg shadow-md hover:bg-clr-amour"> Explorer</a>
     </div>
 
