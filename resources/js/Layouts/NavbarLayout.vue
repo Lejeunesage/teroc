@@ -23,7 +23,7 @@ const showingNavigationDropdown = ref(false);
 <nav class="bg-clr-amour shadow-md fixed left-0 right-0">
     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
          <!-- Logo -->
-         <div class="shrink-0 flex items-center">
+         <div class="shrink-0 flex items-center ">
             <Link :href="route('acceuil')">
                 <ApplicationLogo
                     class="block h-9 w-auto fill-current text-gray-800"
@@ -31,6 +31,7 @@ const showingNavigationDropdown = ref(false);
             </Link>
             
         </div>
+       
         <div class="flex items-center">
             <PrincipalLink class="text-lg hover:underline  hidden md:flex"  href="tel:+22957972575" >
                 <span>Appelez-nous :</span>
