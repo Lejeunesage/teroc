@@ -143,15 +143,21 @@ class=" hidden md:flex  bg-gray-50 shadow-md md:fixed left-0 right-0 top-14"
 
 </template>
 
-<!-- <style>
+<style>
 ::-webkit-scrollbar-thumb{
-    width: 5px;
+    background-color: orange;
+    border-radius: 50px;
 }
 
 ::-webkit-scrollbar-track{
-    background-color: orange;
+    background-color: #e2e0ff;
+
 }
 
-</style> -->
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+</style>
 
 
