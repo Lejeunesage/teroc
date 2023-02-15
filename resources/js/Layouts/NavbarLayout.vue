@@ -85,10 +85,10 @@ class=" hidden md:flex  bg-gray-50 shadow-md md:fixed left-0 right-0 top-14"
         <div class="flex items-center justify-center">
             <ul class="flex flex-row mt-0 mr-6 space-x-8 text-sm font-medium">
                 <li>
-                    <PrincipalLink  href="#" class=" text-lg text-gray-900  hover:text-[orange]" aria-current="page">Acceuil</PrincipalLink>
+                    <PrincipalLink  :href="route('acceuil')" class=" text-lg text-gray-900  hover:text-[orange]" aria-current="page">Acceuil</PrincipalLink>
                 </li>
                 <li>
-                    <PrincipalLink  href="#" class=" text-lg text-gray-900  hover:text-[orange]">Service</PrincipalLink>
+                    <PrincipalLink  :href="route('service')" class=" text-lg text-gray-900  hover:text-[orange]">Service</PrincipalLink>
                 </li>
                 <li>
                     <PrincipalLink  href="#" class=" text-lg text-gray-900  hover:text-[orange]">Portfolio</PrincipalLink>
