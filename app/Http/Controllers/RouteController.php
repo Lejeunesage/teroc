@@ -26,6 +26,24 @@ class RouteController extends Controller
     {
         return Inertia::render('Views/Service');
     }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function developpementDeLogiciels()
+    {
+        return Inertia::render('Technologie/Applications');
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function contact()
+    {
+        return Inertia::render('Views/Contact');
+    }
 
     
 }

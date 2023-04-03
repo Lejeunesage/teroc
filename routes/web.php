@@ -26,6 +26,8 @@ use App\Http\Controllers\PortfolioController;
 // WEBPAGE
 Route::get('/', [RouteController::class, 'index'])->name('acceuil');
 Route::get('/service', [RouteController::class, 'service'])->name('service');
+Route::get('/service/developpement-de-logiciels', [RouteController::class, 'developpementDeLogiciels'])->name('developpementDeLogiciels');
+Route::get('/contact', [RouteController::class, 'contact'])->name('contact');
 
 Route::middleware('auth')->group(function () {
 

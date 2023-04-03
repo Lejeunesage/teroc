@@ -97,7 +97,7 @@ class=" hidden md:flex  bg-gray-50 shadow-md md:fixed left-0 right-0 top-14"
                     <PrincipalLink  href="#" class=" text-lg text-gray-900  hover:text-[orange]">A propos</PrincipalLink>
                 </li>
                 <li>
-                    <PrincipalLink  href="#" class=" text-lg text-gray-900  hover:text-[orange]">Contact</PrincipalLink>
+                    <PrincipalLink  href="contact" class=" text-lg text-gray-900  hover:text-[orange]">Contact</PrincipalLink>
                 </li>
             </ul>
         </div>
@@ -116,7 +116,7 @@ class=" hidden md:flex  bg-gray-50 shadow-md md:fixed left-0 right-0 top-14"
                     <PrincipalLink  href="#" class=" text-lg text-gray-900  hover:text-[orange]" aria-current="page">Acceuil</PrincipalLink>
                 </li>
                 <li class="border-b-2  pb-3">
-                    <PrincipalLink  href="#" class=" text-lg text-gray-900  hover:text-[orange]">Service</PrincipalLink>
+                    <PrincipalLink  href="/service" class=" text-lg text-gray-900  hover:text-[orange]">Service</PrincipalLink>
                 </li>
                 <li class="border-b-2  pb-3">
                     <PrincipalLink  href="#" class=" text-lg text-gray-900  hover:text-[orange]">Portfolio</PrincipalLink>
@@ -125,7 +125,7 @@ class=" hidden md:flex  bg-gray-50 shadow-md md:fixed left-0 right-0 top-14"
                     <PrincipalLink  href="#" class=" text-lg text-gray-900  hover:text-[orange]">A propos</PrincipalLink>
                 </li>
                 <li class="border-b-2  pb-3">
-                    <PrincipalLink  href="#" class=" text-lg text-gray-900  hover:text-[orange]">Contact</PrincipalLink>
+                    <PrincipalLink  href="/contact" class=" text-lg text-gray-900  hover:text-[orange]">Contact</PrincipalLink>
                 </li>
             </ul>
         </div>
