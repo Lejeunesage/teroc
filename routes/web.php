@@ -27,6 +27,8 @@ use App\Http\Controllers\PortfolioController;
 Route::get('/', [RouteController::class, 'index'])->name('acceuil');
 Route::get('/service', [RouteController::class, 'service'])->name('service');
 Route::get('/service/developpement-de-logiciels', [RouteController::class, 'developpementDeLogiciels'])->name('developpementDeLogiciels');
+Route::get('/service/conception-site-web', [RouteController::class, 'SiteWeb'])->name('conceptionSiteWeb');
+Route::get('/service/boutique-en-ligne', [RouteController::class, 'boutiqueEnLigne'])->name('boutiqueEnLigne');
 Route::get('/contact', [RouteController::class, 'contact'])->name('contact');
 
 Route::middleware('auth')->group(function () {

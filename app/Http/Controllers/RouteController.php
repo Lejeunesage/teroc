@@ -40,6 +40,24 @@ class RouteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function SiteWeb()
+    {
+        return Inertia::render('Technologie/Siteweb');
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function boutiqueEnLigne()
+    {
+        return Inertia::render('Technologie/BoutiqueEnLigne');
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function contact()
     {
         return Inertia::render('Views/Contact');

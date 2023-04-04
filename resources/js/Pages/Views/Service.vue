@@ -80,7 +80,7 @@ function submit() {
                         <div class="flex justify-center items-center flex-col gap-2 mb-5">
                             <img class="w-[15rem]  h-[8rem]" src="@/../../public/images/site_web.jpg" alt="">
                             <h4 class="font-semibold ">
-                                <a class="flex font-bold hover:underline text-xl " href="">
+                                <a class="flex font-bold hover:underline text-xl " href="/service/conception-site-web">
                                     Site Web
                                 </a>
                             </h4>
@@ -88,7 +88,7 @@ function submit() {
                                 Nous créons des sites web personnalisés et autogérés qui génèrent des visites et
                                 améliorent...</p>
                         </div>
-                        <a class="flex  items-center justify-start font-bold text-lg " href="#">Lire la suite
+                        <a class="flex  items-center justify-start font-bold text-lg " href="/service/conception-site-web">Lire la suite
                             <ArrowIcon />
                         </a>
                     </div>
@@ -97,7 +97,7 @@ function submit() {
 
                             <img class="w-[15rem]  h-[8rem]" src="@/../../public/images/e-commerce.jpg" alt="">
                             <h4 class="font-semibold ">
-                                <a class="flex font-bold hover:underline text-xl " href="">
+                                <a class="flex font-bold hover:underline text-xl " href="/service/boutique-en-ligne">
                                     Boutique En Ligne
                                 </a>
                             </h4>
@@ -106,7 +106,7 @@ function submit() {
                                 création de...
                             </p>
                         </div>
-                        <a class="flex  items-center justify-start font-bold text-lg " href="#">Lire la suite
+                        <a class="flex  items-center justify-start font-bold text-lg " href="/service/boutique-en-ligne">Lire la suite
                             <ArrowIcon />
                         </a>
                     </div>
