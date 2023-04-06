@@ -58,6 +58,15 @@ class RouteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function referencementSeo()
+    {
+        return Inertia::render('Marketing/Referencement');
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function contact()
     {
         return Inertia::render('Views/Contact');

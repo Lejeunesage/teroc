@@ -124,7 +124,7 @@ function submit() {
                         <div class="flex justify-center items-center flex-col gap-2 mb-5">
                             <img class="w-[15rem]  h-[8rem]  h-[10rem]" src="@/../../public/images/redaction_web.jpg" alt="">
                             <h4 class="font-semibold ">
-                                <a class="flex font-bold hover:underline text-xl" href="">
+                                <a class="flex font-bold hover:underline text-xl" href="/service/seo-referencement-naturel">
                                     Référencement Naturel (SEO)
                                 </a>
                             </h4>
@@ -133,7 +133,7 @@ function submit() {
                                 en...
                             </p>
                         </div>
-                        <a class="flex  items-center justify-start font-bold text-lg " href="#">Lire la suite
+                        <a class="flex  items-center justify-start font-bold text-lg " href="/service/seo-referencement-naturel">Lire la suite
                             <ArrowIcon />
                         </a>
                     </div>

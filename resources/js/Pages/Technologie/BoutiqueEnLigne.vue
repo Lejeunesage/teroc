@@ -58,7 +58,7 @@ const toggleFAQ = (index) => {
         <Head title="Développement de logiciel" />
 
 
-        <div class="bg-[url('@/../../public/images/e-commerce.jpg')] bg-cover object-cover h-[40rem] mt-10 mb-20 ">
+        <div class="bg-[url('@/../../public/images/e-commerce.jpg')] bg-cover object-cover h-[40rem] mt-20 mb-20 ">
             <div class="bg-[#4d3d40bf] h-[40rem]  ">
                 <div class=" flex flex-col h-[40rem] mx-auto max-w-screen-lg justify-center mx-auto md:px-6 py-2.5 ">
                     <div class="max-w-xl  ">
