@@ -49,7 +49,7 @@ const toggleFAQ = (index) => {
 
 
 
-
+ 
 </script>
 
 <template>
